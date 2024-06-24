@@ -25,7 +25,7 @@ app.post("/create-payment-intent", async (req, res) => {
 
     try {
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: calculateTotalOrderAmount(items),
+            amount: calculateTotalOrderAmount(items), 
             currency: "usd",
             description: "This is for GFG Stripe API Demo",
             automatic_payment_methods: {
