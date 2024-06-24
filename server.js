@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const stripe = require("stripe")(sk_test_51PU0z4P1TthxkHW33mdh5zyA4VVj1tECnzeXOZenzuPBPK8aBakgc8zX5qKp1Ra7x9FyBEIWEVnqPg5LWxetjAnt00MH1E474y );
+const stripe = require("stripe")("sk_test_51PU0z4P1TthxkHW33mdh5zyA4VVj1tECnzeXOZenzuPBPK8aBakgc8zX5qKp1Ra7x9FyBEIWEVnqPg5LWxetjAnt00MH1E474y");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
