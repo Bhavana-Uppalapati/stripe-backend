@@ -21,7 +21,7 @@ app.post("/create-payment-intent", async (req, res) => {
 
     if (!items || !Array.isArray(items) || items.length === 0) {
         return res.status(400).send({ error: "Invalid items array" });
-    }
+    } 
 
     try {
         const paymentIntent = await stripe.paymentIntents.create({
