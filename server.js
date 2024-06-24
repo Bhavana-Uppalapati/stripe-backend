@@ -9,7 +9,7 @@ const stripe = require("stripe")('sk_test_51PU0z4P1TthxkHW33mdh5zyA4VVj1tECnzeXO
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+app.use(cors("*"));
 app.use(bodyParser.json());
 
 const calculateTotalOrderAmount = (items) => {
